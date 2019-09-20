@@ -12,7 +12,8 @@ def get_audio_input() -> str:
     recognizer = sr.Recognizer()
     mic = sr.Microphone()
     with mic as source:
-        recognizer.adjust_for_ambient_noise(source)
+        recognizer.adjust_for_ambient_noise(source, duration=0.5)
+        speak('yes')
         audio = recognizer.listen(source)
     said = ''
 

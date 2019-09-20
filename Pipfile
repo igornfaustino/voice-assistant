@@ -17,6 +17,7 @@ pyinstaller = "*"
 pyttsx3 = "*"
 google-speech = "*"
 pytz = "*"
+pocketsphinx = "*"
 
 [dev-packages]
 flake8 = "*"
