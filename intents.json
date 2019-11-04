@@ -1,0 +1,10 @@
+[
+  {
+    "intent": "check_calendar",
+    "patterns": ["do i have plans", "what do i have", "am i busy", "What is on my callendar", "how is my day"]
+  },
+  {
+    "intent": "search",
+    "patterns": ["search for", "seek for", "look about"]
+  }
+]

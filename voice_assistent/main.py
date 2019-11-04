@@ -1,6 +1,7 @@
 import commands
 from common import voice
 from pocketsphinx import LiveSpeech
+from learning.intents import Intents
 
 
 def listen_to_wakeup(wakeup_command):
@@ -11,4 +12,6 @@ def listen_to_wakeup(wakeup_command):
 
 
 if __name__ == '__main__':
-    listen_to_wakeup('oracle')
+    # listen_to_wakeup('oracle')
+    i = Intents()
+    i.train()
