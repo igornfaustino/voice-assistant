@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+SpeechRecognition = "*"
+gTTS = "*"
+playsound = "*"
+PyAudio = "*"
+gobject = "*"
+pygobject = "*"
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
+pyinstaller = "*"
+pyttsx3 = "*"
+google-speech = "*"
+pytz = "*"
+pocketsphinx = "*"
+tensorflow = "==1.14.0"
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+rope = "*"
+
+[requires]
+python_version = "3.7"
