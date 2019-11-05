@@ -19,6 +19,9 @@ google-speech = "*"
 pytz = "*"
 pocketsphinx = "*"
 tensorflow = "==1.14.0"
+timefhuman = "*"
+nltk = "*"
+python-dateutil = "*"
 
 [dev-packages]
 flake8 = "*"
