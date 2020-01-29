@@ -7,9 +7,10 @@ def listen_to_wakeup(wakeup_command):
     speech = LiveSpeech(lm=False, keyphrase=wakeup_command,
                         kws_threshold=1e-20)
     for phrase in speech:
+        print("oi")
         commands.handler(voice.get_audio_input())
 
 
 if __name__ == '__main__':
-    # listen_to_wakeup('oracle')
-    commands.handler("what do i have for october 27th")
+    listen_to_wakeup('oracle')
+    # commands.handler("what is the news")

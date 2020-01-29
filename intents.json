@@ -6,5 +6,9 @@
   {
     "intent": "search",
     "patterns": ["search for", "seek for", "look about"]
+  },
+  {
+    "intent": "news",
+    "patterns": ["check news", "what's the news", "look at the news"]
   }
 ]

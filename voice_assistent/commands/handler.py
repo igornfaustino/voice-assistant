@@ -1,4 +1,4 @@
-from . import date, applications
+from . import date, applications, news
 from common.voice import speak
 from learning import intents
 
@@ -18,3 +18,5 @@ def handler(text):
         return date.handle_check_plans(text)
     if intent == "search":
         return speak("search")
+    if intent == "news":
+        news._speak_events()

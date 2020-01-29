@@ -3,8 +3,8 @@ import speech_recognition as sr
 from .utils import create_audio_file
 
 
-def speak(text):
-    filename = create_audio_file(text)
+def speak(text, lang="en"):
+    filename = create_audio_file(text, lang)
     playsound.playsound(filename, block=True)
 
 
