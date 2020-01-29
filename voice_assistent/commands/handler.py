@@ -12,11 +12,14 @@ def handler(text):
 
     intent = intent_predictor.predict(text)
     print(intent)
-    if not intent:
-        return speak(text)
-    if intent == "check_calendar":
-        return date.handle_check_plans(text)
-    if intent == "search":
-        return speak("search")
-    if intent == "news":
-        news._speak_events()
+    try:
+        if not intent:
+            return speak(text)
+        if intent == "check_calendar":
+            return date.handle_check_plans(text)
+        if intent == "search":
+            return speak("search")
+        if intent == "news":
+            news._speak_events()
+    except Exception:
+        speak("Sorry master, I can't understand you")

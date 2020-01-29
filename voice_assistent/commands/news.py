@@ -12,6 +12,7 @@ def get_top_headlines():
 
 
 def _speak_events():
+    voice.speak("playing the brazilian news now")
     headlines = get_top_headlines()
     for headline in headlines:
         send_notification(headline['title'],

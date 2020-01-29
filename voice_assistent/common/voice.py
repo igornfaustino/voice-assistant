@@ -1,9 +1,12 @@
 import playsound
 import speech_recognition as sr
 from .utils import create_audio_file
+import os
 
 
 def speak(text, lang="en"):
+    if lang == "en":
+        return os.system(f'espeak -v mb/mb-en1 -s 130 "{text}"')
     filename = create_audio_file(text, lang)
     playsound.playsound(filename, block=True)
 

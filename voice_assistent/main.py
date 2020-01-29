@@ -12,5 +12,5 @@ def listen_to_wakeup(wakeup_command):
 
 
 if __name__ == '__main__':
-    listen_to_wakeup('oracle')
-    # commands.handler("what is the news")
+    listen_to_wakeup('alfred')
+    # commands.handler("am i busy")
