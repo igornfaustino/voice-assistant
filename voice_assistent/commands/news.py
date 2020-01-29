@@ -3,7 +3,7 @@ from common import voice
 from common.utils import send_notification
 
 # Init
-newsapi = NewsApiClient(api_key='abf88f1509c04a9eb26ee4627148566f')
+newsapi = NewsApiClient(api_key='')
 
 
 def get_top_headlines():
