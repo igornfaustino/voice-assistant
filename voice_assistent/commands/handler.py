@@ -1,4 +1,4 @@
-from . import date, applications, news
+from . import date, applications, news, weather
 from common.voice import speak
 from learning import intents
 
@@ -21,5 +21,8 @@ def handler(text):
             return speak("search")
         if intent == "news":
             news._speak_events()
-    except Exception:
-        speak("Sorry master, I can't understand you")
+        if intent == "weather":
+            weather.speak_weather()
+    except Exception as e:
+        print(e)
+        speak("Sorry, I can't understand you")

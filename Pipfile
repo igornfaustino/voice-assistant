@@ -20,6 +20,10 @@ python-dateutil = "*"
 newsapi-python = "*"
 notify2 = "*"
 dbus-python = "*"
+gobject = "*"
+pygobject = "*"
+pvporcupine = "*"
+requests = "*"
 
 [dev-packages]
 flake8 = "*"

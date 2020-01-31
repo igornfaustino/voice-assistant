@@ -42,12 +42,18 @@ You can trigger this feature by saying something like
 
 **IMPORTANT: this was only tested on linux so far**
 
-- install dependencies using [pipenv](https://github.com/pypa/pipenv)
+- linux packages needed:
+
+```bash
+$ sudo apt install libdbus-1-dev libdbus-glib-1-dev build-essential swig git libpulse-dev libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg espeak mbrola  mbrola-br1  mbrola-en1 pkg-config libcairo2-dev gcc python3-dev libgirepository1.0-dev python-gst-1.0 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-tools
+```
+
+- install python dependencies using [pipenv](https://github.com/pypa/pipenv)
 
 ```bash
 $ pipenv install
 ```
 
-- get a [Google calendar credentials](https://developers.google.com/calendar/quickstart/python?authuser=3) and put the `credentials.json` on the `root` folder
+- get a [Google calendar credentials](https://developers.google.com/calendar) and put the `credentials.json` on the `root` folder
 - run the `main.py` file
 

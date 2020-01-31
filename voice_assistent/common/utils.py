@@ -1,11 +1,16 @@
 import os
+import notify2
+import requests
 from gtts import gTTS
 from pathlib import Path
-import notify2
 
 
 filename = 'voice.mp3'
 notify2.init("voice_assistant")
+
+
+def get_current_public_ip():
+    return requests.get('https://api.ipify.org').text
 
 
 def create_audio_file(text, lang="en"):
@@ -27,6 +32,6 @@ def open_page(link):
     return open_link
 
 
-def send_notification(title, link=None):
-    notification = notify2.Notification(title, link)
+def send_notification(title):
+    notification = notify2.Notification(title)
     notification.show()

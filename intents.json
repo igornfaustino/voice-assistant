@@ -10,5 +10,9 @@
   {
     "intent": "news",
     "patterns": ["check news", "what's the news", "look at the news"]
+  },
+  {
+    "intent": "weather",
+    "patterns": ["how is the weather", "it's going to rain", "should i use a coat"]
   }
 ]

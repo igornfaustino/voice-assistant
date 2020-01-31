@@ -3,7 +3,7 @@ from common import voice
 from common.utils import send_notification
 
 # Init
-newsapi = NewsApiClient(api_key='')
+newsapi = NewsApiClient(api_key='5dc834a547c240b4970b41323a193965')
 
 
 def get_top_headlines():
@@ -15,6 +15,5 @@ def _speak_events():
     voice.speak("playing the brazilian news now")
     headlines = get_top_headlines()
     for headline in headlines:
-        send_notification(headline['title'],
-                          headline["url"])
+        send_notification(headline['title'])
         voice.speak(headline['title'], lang="pt-br")
