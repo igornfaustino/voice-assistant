@@ -23,6 +23,8 @@ def handler(text):
             news._speak_events()
         if intent == "weather":
             weather.speak_weather()
+        if intent == "open":
+            applications.handle_open(text)
     except Exception as e:
         print(e)
         speak("Sorry, I can't understand you")

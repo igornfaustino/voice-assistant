@@ -32,7 +32,9 @@ class Intents:
             tf.keras.layers.Dense(len(self.intents_bag), activation="softmax"),
         ])
 
-        self.model.compile(optimizer="adam", loss='categorical_crossentropy', metrics=['accuracy'])
+        self.model.compile(
+            optimizer="adam",
+            loss='categorical_crossentropy', metrics=['accuracy'])
 
     def load_intents(self) -> list():
         json_path = pathlib.Path(ROOT_PATH).joinpath("intents.json")
@@ -71,9 +73,10 @@ class Intents:
             label[self.intents_bag.index(tag)] = 1
             labels.append(label)
         return np.array(labels)
-    
+
     def str_to_input(self, sentence):
-        words_in_sentence = [self.steammer.stem(word.lower()) for word in sentence.split(" ")]
+        words_in_sentence = [self.steammer.stem(
+            word.lower()) for word in sentence.split(" ")]
         feature = [0 for i in range(len(self.words_bag))]
         for idx, word in enumerate(self.words_bag):
             if word in words_in_sentence:
@@ -84,7 +87,7 @@ class Intents:
         features = self.get_features()
         labels = self.get_labels()
         self.model.fit(features, labels, epochs=500)
-    
+
     def predict(self, sentence):
         feature = self.str_to_input(sentence)
         intents_predicts = self.model.predict(feature)[0]

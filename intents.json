@@ -1,18 +1,44 @@
 [
   {
     "intent": "check_calendar",
-    "patterns": ["do i have plans for", "what do i have", "am i busy", "What's on my callendar for", "how is my day"]
+    "patterns": [
+      "do i have plans for",
+      "what do i have",
+      "am i busy",
+      "What's on my callendar for",
+      "how is my day"
+    ]
   },
   {
     "intent": "search",
-    "patterns": ["search for", "seek for", "look about"]
+    "patterns": [
+      "search for",
+      "seek for",
+      "look about"
+    ]
   },
   {
     "intent": "news",
-    "patterns": ["check news", "what's the news", "look at the news"]
+    "patterns": [
+      "check news",
+      "what's the news",
+      "look at the news"
+    ]
   },
   {
     "intent": "weather",
-    "patterns": ["how is the weather", "it's going to rain", "should i use a coat"]
+    "patterns": [
+      "how is the weather",
+      "it's going to rain",
+      "should i use a coat",
+      "the weather is good today",
+      "the weather is bad today"
+    ]
+  },
+  {
+    "intent": "open",
+    "patterns": [
+      "open"
+    ]
   }
 ]
