@@ -40,5 +40,11 @@
     "patterns": [
       "open"
     ]
+  },
+  {
+    "intent": "protocol",
+    "patterns": [
+      "activate protocol", "protocol", "run protocol"
+    ]
   }
 ]

@@ -11,7 +11,7 @@ def get_top_headlines():
                                      country='br', page_size=10)['articles']
 
 
-def _speak_events():
+def handle_news():
     voice.speak("playing the brazilian news now")
     headlines = get_top_headlines()
     for headline in headlines:

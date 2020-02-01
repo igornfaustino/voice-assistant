@@ -14,6 +14,7 @@ def get_audio_input() -> str:
     with mic as source:
         # recognizer.adjust_for_ambient_noise(source, duration=0.5)
         # speak('yes')
+        playsound.playsound("listening.mp3", block=True)
         audio = recognizer.listen(source, phrase_time_limit=5)
     said = ''
 
